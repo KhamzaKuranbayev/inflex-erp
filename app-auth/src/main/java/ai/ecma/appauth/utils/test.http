@@ -1,0 +1,467 @@
+###----------AUTHCONTROLLER----------------####
+
+POST http://localhost:81/api/auth/v1/openAuth/check-phone
+Content-Type: application/json
+Accept-Language: uz
+
+{
+  "phoneNumber": "+998996791137"
+}
+
+###
+POST http://localhost:81/api/auth/v1/openAuth/sign-up
+Content-Type: application/json
+
+{
+  "firstName": "Diyor",
+  "lastName": "Xolmurodov",
+  "phoneNumber": "+998996791137",
+  "password": "Root_123",
+  "prePassword": "Root_123",
+  "smsCode": "448217",
+  "smsCodeId": "4a790250-7783-4abc-920f-98166b0fd7ae",
+  "reliableDevice": true
+}
+
+###
+POST http://localhost:81/api/auth/v1/openAuth/sign-in
+Content-Type: application/json
+
+{
+  "phoneNumber": "+998996791136",
+  "password": "Root_123",
+  "deviceKey": "36e8c4f9-709f-4dd9-8db6-39779b6a8e6d"
+}
+
+###
+POST http://localhost:81/api/auth/v1/openAuth/check-sms-code-sign-in
+Content-Type: application/json
+
+{
+  "reliableDevice": true,
+  "smsCodeId": "56e11f00-a327-4ac5-878e-599ad30e2f69",
+  "smsCode": "179669"
+}
+
+###
+POST http://localhost:81/api/auth/v1/openAuth/forgot-password
+Content-Type: application/json
+
+{
+  "phoneNumber": "+998996791137"
+}
+
+###
+POST http://localhost:81/api/auth/v1/openAuth/check-sms-code-forgot-password
+Content-Type: application/json
+
+{
+  "reliableDevice": false,
+  "smsCodeId": "ffe624ff-ce71-40e0-9cd4-76618cb162d0",
+  "smsCode": "555020"
+}
+
+###
+POST http://localhost:81/api/auth/v1/openAuth/reset-password
+Content-Type: application/json
+
+{
+  "password": "Root_12345",
+  "prePassword": "Root_12345",
+  "reliableDevice": true,
+  "smsCodeId": "ffe624ff-ce71-40e0-9cd4-76618cb162d0",
+  "smsCode": "555020"
+}
+
+
+###----------DEPARTMENTCONTROLLER----------------####
+### academic uchun
+
+POST http://localhost:81/api/auth/v1/department
+Content-Type: application/json
+Authorization: Basic YWNhZGVtaWM6YWNhZGVtaWNAUm9vdDEyMw==
+
+[
+  {
+    "title": "Student",
+    "name": "student",
+    "pages": [
+      {
+        "title": "Talabalar ro'yxati",
+        "name": "studentList",
+        "permissions": [
+          {
+            "title": "Talabalar ro'yxati",
+            "name": "STUDENT_LIST"
+          },
+          {
+            "title": "Talaba haqida",
+            "name": "STUDENT_INFO"
+          },
+          {
+            "title": "Talabani tahrirlash",
+            "name": "EDIT_STUDENT"
+          }
+        ]
+      },
+      {
+        "title": "Imtihon",
+        "name": "exam",
+        "permissions": [
+          {
+            "title": "Bla",
+            "name": "BLA"
+          },
+          {
+            "title": "Battar",
+            "name": "BATTAR"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+###
+POST http://localhost:81/api/auth/v1/role
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzYTRlZTJjMy03YzVkLTRiNWItM2IyNDIxM2UtZjA5OS00MjgxLTgyZTYtZWY5YzgxZTQxZjBiLTg2NjItZWEwNDBjYThiZTM4IiwiaWF0IjoxNjI5NTM0NjQ2LCJleHAiOjE2Mjk1Nzc4NDZ9.bbsb1D9oDYB2QBQzO1WAK5uahGuLakmMU3Qbpzbx-h4
+
+
+{
+  "name": "Mentor",
+  "roleType": "MENTOR",
+  "description": "Dars o'tadi uxlagan bolalarga",
+  "modules": [
+    {
+      "name": "ACADEMIC",
+      "departments": [
+        {
+          "pages": [
+            {
+              "id": 3,
+              "permissions": [
+                {
+                  "id": 10
+                },
+                {
+                  "id": 11
+                },
+                {
+                  "id": 12
+                }
+              ],
+              "defaultPage": true
+            },
+            {
+              "id": 4,
+              "permissions": [
+                {
+                  "id": 13
+                },
+                {
+                  "id": 14
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+### account uchun
+
+POST http://localhost:81/api/auth/v1/department
+Content-Type: application/json
+Authorization: Basic YWNjb3VudDphY2NvdW50cm9vdDEyMw==
+
+[
+  {
+    "title": "Salary",
+    "name": "salary",
+    "pages": [
+      {
+        "title": "Maoshlar ro'yxati",
+        "name": "salaryList",
+        "permissions": [
+          {
+            "title": "Maashlar ro'yxati",
+            "name": "SALARY_LIST"
+          },
+          {
+            "title": "Maosh haqida",
+            "name": "SALARY_INFO"
+          },
+          {
+            "title": "Maoshni tahrirlash",
+            "name": "SALARY_STUDENT"
+          }
+        ]
+      },
+      {
+        "title": "Imtihon",
+        "name": "exam",
+        "permissions": [
+          {
+            "title": "Bla",
+            "name": "BLA"
+          },
+          {
+            "title": "Battar",
+            "name": "BATTAR"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+### sales uchun
+
+POST http://localhost:81/api/auth/v1/department
+Content-Type: application/json
+Authorization: Basic c2FsZXM6c2FsZXNyb290MTIz
+
+[
+  {
+    "title": "market",
+    "name": "market",
+    "pages": [
+      {
+        "title": "Market ro'yxati",
+        "name": "salaryList",
+        "permissions": [
+          {
+            "title": "Maashlar ro'yxati",
+            "name": "SALARY_LIST"
+          },
+          {
+            "title": "Maosh haqida",
+            "name": "SALARY_INFO"
+          },
+          {
+            "title": "Maoshni tahrirlash",
+            "name": "SALARY_STUDENT"
+          }
+        ]
+      },
+      {
+        "title": "Imtihon",
+        "name": "exam",
+        "permissions": [
+          {
+            "title": "Bla",
+            "name": "BLA"
+          },
+          {
+            "title": "Battar",
+            "name": "BATTAR"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+
+### hrms uchun
+
+POST http://localhost:81/api/auth/v1/department
+Content-Type: application/json
+Authorization: Basic aHJtczpocm1zcm9vdDEyMw==
+
+[
+  {
+    "title": "Book",
+    "name": "book",
+    "pages": [
+      {
+        "title": "Market ro'yxati",
+        "name": "salaryList",
+        "permissions": [
+          {
+            "title": "Maashlar ro'yxati",
+            "name": "SALARY_LIST"
+          },
+          {
+            "title": "Maosh haqida",
+            "name": "SALARY_INFO"
+          },
+          {
+            "title": "Maoshni tahrirlash",
+            "name": "SALARY_STUDENT"
+          }
+        ]
+      },
+      {
+        "title": "Imtihon",
+        "name": "exam",
+        "permissions": [
+          {
+            "title": "Bla",
+            "name": "BLA"
+          },
+          {
+            "title": "Battar",
+            "name": "BATTAR"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+###  project uchun
+
+POST http://localhost:81/api/auth/v1/department
+Content-Type: application/json
+Authorization: Basic cHJvamVjdDpwcm9qZWN0cm9vdDEyMw==
+
+[
+  {
+    "title": "Application",
+    "name": "app",
+    "pages": [
+      {
+        "title": "Market ro'yxati",
+        "name": "salaryList",
+        "permissions": [
+          {
+            "title": "Maashlar ro'yxati",
+            "name": "SALARY_LIST"
+          },
+          {
+            "title": "Maosh haqida",
+            "name": "SALARY_INFO"
+          },
+          {
+            "title": "Maoshni tahrirlash",
+            "name": "SALARY_STUDENT"
+          }
+        ]
+      },
+      {
+        "title": "Imtihon",
+        "name": "exam",
+        "permissions": [
+          {
+            "title": "Bla",
+            "name": "BLA"
+          },
+          {
+            "title": "Battar",
+            "name": "BATTAR"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+###  docs uchun
+
+POST http://localhost:81/api/auth/v1/department
+Content-Type: application/json
+Authorization: Basic ZG9jczpkb2Nzcm9vdDEyMw==
+
+[
+  {
+    "title": "Paper",
+    "name": "paper",
+    "pages": [
+      {
+        "title": "Market ro'yxati",
+        "name": "salaryList",
+        "permissions": [
+          {
+            "title": "Maashlar ro'yxati",
+            "name": "SALARY_LIST"
+          },
+          {
+            "title": "Maosh haqida",
+            "name": "SALARY_INFO"
+          },
+          {
+            "title": "Maoshni tahrirlash",
+            "name": "SALARY_STUDENT"
+          }
+        ]
+      },
+      {
+        "title": "Imtihon",
+        "name": "exam",
+        "permissions": [
+          {
+            "title": "Bla",
+            "name": "BLA"
+          },
+          {
+            "title": "Battar",
+            "name": "BATTAR"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+###  reports uchun
+
+POST http://localhost:81/api/auth/v1/department
+Content-Type: application/json
+Authorization: Basic cmVwb3J0czpyZXBvcnRzcm9vdDEyMw==
+
+[
+  {
+    "title": "Mark",
+    "name": "mark",
+    "pages": [
+      {
+        "title": "Market ro'yxati",
+        "name": "salaryList",
+        "permissions": [
+          {
+            "title": "Maashlar ro'yxati",
+            "name": "SALARY_LIST"
+          },
+          {
+            "title": "Maosh haqida",
+            "name": "SALARY_INFO"
+          },
+          {
+            "title": "Maoshni tahrirlash",
+            "name": "SALARY_STUDENT"
+          }
+        ]
+      },
+      {
+        "title": "Imtihon",
+        "name": "exam",
+        "permissions": [
+          {
+            "title": "Bla",
+            "name": "BLA"
+          },
+          {
+            "title": "Battar",
+            "name": "BATTAR"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+###
+### TOKEN ORQALI USERNI OLISH
+GET http://localhost:81/api/auth/v1/user/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGRlZjZlOC1jZjFhLTQ3MzYtY2JhN2M3NWEtY2ViMC00ZTBkLWEwYmEtOTAxNzU3NzJlNDNkLWE1OTctYmM4ZjA5NjRkYzdhIiwiaWF0IjoxNjI5NTM0NTcxLCJleHAiOjE2Mjk1Nzc3NzF9.hSvDhw9IKHAbt7-y0r8niJ5SHKVZvogKd5e1oD5wRMc
+
+###
+### USERGA MA'LUM PAGE UCHUN BERILGAN PERMISSIONLARNING LISTINI OLISH
+GET http://localhost:81/api/auth/v1/user/page-permission/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyOGRlZjZlOC1jZjFhLTQ3MzYtY2JhN2M3NWEtY2ViMC00ZTBkLWEwYmEtOTAxNzU3NzJlNDNkLWE1OTctYmM4ZjA5NjRkYzdhIiwiaWF0IjoxNjI5NTM0NTcxLCJleHAiOjE2Mjk1Nzc3NzF9.hSvDhw9IKHAbt7-y0r8niJ5SHKVZvogKd5e1oD5wRMc

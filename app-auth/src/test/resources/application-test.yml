@@ -1,0 +1,69 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  sql:
+    init:
+      enabled: true
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL95Dialect
+      dbType: POSTGRESQL
+  datasource:
+    url: jdbc:postgresql://localhost:5435/postgres
+    host: localhost
+    port: 5435
+    dbName: postgres
+    username: postgres
+    password: root123
+    driver-class-name: org.postgresql.Driver
+
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      max: 400
+
+service:
+  academic:
+    username: academic
+    password: academicroot123
+  account:
+    username: account
+    password: accountroot123
+  sales:
+    username: sales
+    password: salesroot123
+  hrms:
+    username: hrms
+    password: hrmsroot123
+  project:
+    username: project
+    password: projectroot123
+  docs:
+    username: docs
+    password: docsroot123
+  reports:
+    username: reports
+    password: reportsroot123
+
+sms:
+  code:
+    test:
+      password: blablabla789
+
+app:
+  jwt:
+    access:
+      token:
+        key: "j~T2>2VgYH$g~e5Ae7418f6c-cf41-11eb-b8bc-0242ac1300032VgYH$g"
+    refresh:
+      token:
+        key: "Q&qhFLXq:*aS8G>1d797e14-cf42-11eb-b8bc-0242ac130003qhF"

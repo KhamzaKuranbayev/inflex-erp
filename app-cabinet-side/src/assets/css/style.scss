@@ -1,0 +1,65 @@
+@import "./icons.scss";
+@import "./mixin.scss";
+@import "./colors.scss";
+
+body {
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.layout {
+  &__auth {
+    padding: 16px;
+    min-height: 100vh;
+  }
+
+  &__main {
+  }
+
+  &__error {
+  }
+}
+
+.auth {
+  &__sidebar {
+    padding: 34px;
+    background: #ffffff;
+    box-shadow: 0px 0px 2px rgba(145, 158, 171, 0.24),
+      0px 16px 32px -4px rgba(145, 158, 171, 0.24);
+    border-radius: 16px;
+    height: calc(100vh - 34px);
+    position: relative;
+
+    &-content {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      padding: 34px;
+      transform: translateY(-50%);
+      h2 {
+        font-weight: 600;
+        // font-size: 32px;
+        @include adaptive-value(font-size, 32, 16);
+        @include adaptive-value(line-height, 48, 20);
+        // line-height: 48px;
+        color: #002930;
+        margin-bottom: 120px;
+      }
+    }
+  }
+
+  &__login {
+    display: flex;
+    &-left {
+      width: 24%;
+    }
+    &-right {
+      width: 76%;
+    }
+  }
+}

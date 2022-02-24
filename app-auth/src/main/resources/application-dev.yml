@@ -1,0 +1,79 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auth
+    username: postgres
+    password: root123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  sql:
+    init:
+      mode: never
+
+logging:
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: auth.log
+  level:
+    org.springframework.web: ERROR
+    org.hibernate: ERROR
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      #      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka:123456@localhost:8761/eureka
+  instance:
+    hostname: localhost
+
+
+app:
+  jwt:
+    access:
+      token:
+        key: "j~T2>2VgYH$g~e5Ae7418f6c-cf41-11eb-b8bc-0242ac1300032VgYH$g"
+    refresh:
+      token:
+        key: "Q&qhFLXq:*aS8G>1d797e14-cf42-11eb-b8bc-0242ac130003qhF"
+
+springdoc:
+  swagger-ui:
+    tagsSorter: alpha
+    operations-sorter: alpha
+
+service:
+  academic:
+    username: academic
+    password: academic@Root123
+  account:
+    username: account
+    password: accountroot123
+  sales:
+    username: sales
+    password: salesroot123
+  hrms:
+    username: hrms
+    password: hrmsroot123
+  project:
+    username: project
+    password: projectroot123
+  docs:
+    username: docs
+    password: docsroot123
+  reports:
+    username: reports
+    password: reportsroot123
+
+auth:
+  serviceUsername: authservice
+  servicePassword: authserviceroot12345678

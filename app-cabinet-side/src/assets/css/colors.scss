@@ -1,0 +1,65 @@
+:root {
+  // brand
+  --brand--color: #00b533;
+
+  // colors
+  --white: #ffffff;
+  --default: #dfe3e8;
+  --dark--default: #c4cdd5;
+  --dark: #002930;
+  --green: #00b533;
+  --dark--green: #007b55;
+  --info: #1890ff;
+  --primary: #0c53b7;
+  --success: #54d62c;
+  --dark--success: #229a16;
+  --warning: #ffc107;
+  --dark--warning: #b78103;
+  --danger: #ff4842;
+  --dark--danger: #b72136;
+
+  //text
+  --text: #002930;
+  --text--disable: #637381;
+
+  // hover
+  --defult--hover: #f1f3f5;
+  --green--hover: #e5f4ee;
+  --info--hover: #e7f2fb;
+  --success--hover: #ecf7ea;
+  --warning--hover: #f9f5e7;
+  --danger--hover: #f9ecec;
+
+  //shadow
+
+  // Button
+  --btn--text: #212b36;
+  --btn--text--disable: #a1acb7;
+  --btn--border--disable: #e0e4e8;
+  --btn--shadow--default: rgba(145, 158, 171, 0.24);
+  --btn--bg--disable: rgba(145, 158, 171, 0.24);
+  --btn--border--default: #d8dde1;
+  --btn--border--hover--default: rgba(145, 158, 171, 0.32);
+  --btn--bg--hover--default: rgba(145, 158, 171, 0.08);
+  --btn--shadow--green: rgba(0, 171, 85, 0.24);
+  --btn--bg--hover--green: rgba(0, 171, 85, 0.08);
+  --btn--border--green: #81d4ab;
+  --btn--shadow--info: rgba(24, 144, 255, 0.24);
+  --btn--bg--hover--info: rgba(24, 144, 255, 0.08);
+  --btn--border--info: #8dc7fd;
+  --btn--shadow--success: rgba(84, 214, 44, 0.24);
+  --btn--bg--hover--success: rgba(0, 171, 85, 0.08);
+  --btn--border--success: #aae998;
+  --btn--shadow--warning: rgba(255, 193, 7, 0.24);
+  --btn--bg--hover--warning: rgba(255, 193, 7, 0.08);
+  --btn--border--warning: #fcdf86;
+  --btn--shadow--danger: rgba(255, 72, 66, 0.24);
+  --btn--bg--hover--danger: rgba(255, 72, 66, 0.08);
+  --btn--border--danger: #fca5a2;
+
+  // Input
+  --input--border: #d8dde1;
+  --input--border--focus: #002930;
+  --input--caret--color: #28282899;
+  --input--placeholder--color: #919EAB;
+}

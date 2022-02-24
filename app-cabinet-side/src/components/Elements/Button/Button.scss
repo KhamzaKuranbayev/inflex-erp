@@ -1,0 +1,344 @@
+.ui__button {
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--default);
+  color: var(btn--text);
+  padding: 6px 16px;
+  @extend .typhographyMd;
+  border: none;
+  transition: 0.3s linear;
+
+  &.lg {
+    padding: 11px 22px;
+    @extend .typhographyLg;
+  }
+
+  &.md {
+    padding: 6px 16px;
+    @extend .typhographyMd;
+  }
+
+  &.sm {
+    padding: 4px 10px;
+    @extend .typhographySm;
+  }
+
+  &.defDark {
+    background-color: var(--white);
+  }
+
+  &.btnOutlined,
+  &.defDark.btnOutlined {
+    background-color: var(--white);
+    border: 1px solid var(--btn--border--default);
+
+    &:hover {
+      box-shadow: none;
+      border-color: var(--btn--border--hover--default);
+      background: var(--btn--bg--hover--default);
+    }
+  }
+
+  &.btnText,
+  &.defDark.btnText {
+    background-color: var(--white);
+
+    &:hover {
+      box-shadow: none;
+      background: var(--btn--bg--hover--default);
+    }
+  }
+
+  &.green {
+    background-color: var(--green);
+    color: var(--white);
+  }
+
+  &.darkGreen {
+    background-color: var(--dark--green);
+    color: var(--white);
+  }
+
+  &.green,
+  &.darkGreen {
+    &:hover {
+      box-shadow: 0px 8px 16px var(btn--shadow--green);
+    }
+
+    &.btnOutlined,
+    &.btnText {
+      color: var(--green);
+      background-color: var(--white);
+
+      .iconWrapper .icon {
+        background-color: var(--green);
+      }
+      &:hover {
+        box-shadow: none;
+        background: var(--btn--bg--hover--green);
+      }
+    }
+
+    &.btnOutlined {
+      border: 1px solid var(--btn--border--green);
+
+      &:hover {
+        border-color: var(--green);
+      }
+    }
+  }
+
+  &.info {
+    background-color: var(--info);
+    color: var(--white);
+  }
+
+  &.primary {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+
+  &.info,
+  &.primary {
+    &:hover {
+      box-shadow: 0px 8px 16px var(btn--shadow--info);
+    }
+
+    &.btnOutlined,
+    &.btnText {
+      color: var(--info);
+      background-color: var(--white);
+
+      .iconWrapper .icon {
+        background-color: var(--info);
+      }
+      &:hover {
+        box-shadow: none;
+        background: var(--btn--bg--hover--info);
+      }
+    }
+
+    &.btnOutlined {
+      border: 1px solid var(--btn--border--info);
+
+      &:hover {
+        border-color: var(--info);
+      }
+    }
+  }
+
+  &.success {
+    background-color: var(--success);
+  }
+
+  &.darkSuccess {
+    background-color: var(--dark--success);
+  }
+
+  &.success,
+  &.darkSuccess {
+    &:hover {
+      box-shadow: 0px 8px 16px var(btn--shadow--success);
+    }
+
+    &.btnOutlined,
+    &.btnText {
+      color: var(--success);
+      background-color: var(--white);
+
+      .iconWrapper .icon {
+        background-color: var(--success);
+      }
+      &:hover {
+        box-shadow: none;
+        background: var(--btn--bg--hover--success);
+      }
+    }
+
+    &.btnOutlined {
+      border: 1px solid var(--btn--border--success);
+
+      &:hover {
+        border-color: var(--success);
+      }
+    }
+  }
+
+  &.warning {
+    background-color: var(--warning);
+  }
+
+  &.darkWarning {
+    background-color: var(--dark--warning);
+  }
+
+  &.warning,
+  &.darkWarning {
+    &:hover {
+      box-shadow: 0px 8px 16px var(--btn--shadow--warning);
+    }
+
+    &.btnOutlined,
+    &.btnText {
+      color: var(--warning);
+      background-color: var(--white);
+
+      .iconWrapper .icon {
+        background-color: var(--warning);
+      }
+      &:hover {
+        box-shadow: none;
+        background: var(--btn--bg--hover--warning);
+      }
+    }
+
+    &.btnOutlined {
+      border: 1px solid var(--btn--border--warning);
+
+      &:hover {
+        border-color: var(--warning);
+      }
+    }
+  }
+
+  &.danger {
+    background-color: var(--danger);
+    color: var(--white);
+  }
+
+  &.darkDanger {
+    background-color: var(--dark--danger);
+    color: var(--white);
+  }
+
+  &.danger,
+  &.darkDanger {
+    &:hover {
+      box-shadow: 0px 8px 16px var(--btn--shadow--danger);
+    }
+
+    &.btnOutlined,
+    &.btnText {
+      color: var(--danger);
+      background-color: var(--white);
+
+      .iconWrapper .icon {
+        background-color: var(--danger);
+      }
+      &:hover {
+        box-shadow: none;
+        background: var(--btn--bg--hover--danger);
+      }
+    }
+
+    &.btnOutlined {
+      border: 1px solid var(--btn--border--danger);
+
+      &:hover {
+        border-color: var(--danger);
+      }
+    }
+  }
+
+  &.btnDisable {
+    background: var(--btn--bg--disable);
+    color: var(--btn--text--disable);
+    pointer-events: none;
+
+    &.btnOutlined,
+    &.btnText {
+      color: var(--btn--text--disable);
+      background-color: var(--white);
+
+      .iconWrapper .icon {
+        background-color: var(--btn--text--disable);
+      }
+    }
+
+    &.btnOutlined {
+      border: 1px solid var(--btn--border--disable);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 8px 16px var(--btn--shadow--default);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.withIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    .iconWrapper {
+      width: 20px;
+      height: 20px;
+
+      .icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &.lg {
+      .iconWrapper {
+        width: 24px;
+        height: 24px;
+
+        .icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    &.md {
+      .iconWrapper {
+        width: 20px;
+        height: 20px;
+
+        .icon {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    &.sm {
+      .iconWrapper {
+        width: 18px;
+        height: 18px;
+
+        .icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+.typhographyLg {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0px;
+}
+
+.typhographyMd {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+
+.typhographySm {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0px;
+}

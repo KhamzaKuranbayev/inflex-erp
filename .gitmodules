@@ -1,0 +1,21 @@
+[submodule "app-account"]
+	path = app-account
+	url = git@gitlab.com:ecma-team/pdp-erp/app-account.git
+[submodule "app-academic-department"]
+	path = app-academic-department
+	url = git@gitlab.com:ecma-team/pdp-erp/app-academic-department.git
+[submodule "app-sales-marketing"]
+	path = app-sales-marketing
+	url = git@gitlab.com:ecma-team/pdp-erp/app-sales-marketing.git
+[submodule "app-auth"]
+	path = app-auth
+	url = git@gitlab.com:ecma-team/pdp-erp/app-auth.git
+[submodule "app-gateway"]
+	path = app-gateway
+	url = git@gitlab.com:ecma-team/pdp-erp/app-gateway.git
+[submodule "app-home-side"]
+	path = app-home-side
+	url = git@gitlab.com:ecma-team/pdp-erp/app-home-side.git
+[submodule "app-cabinet-side"]
+	path = app-cabinet-side
+	url = git@gitlab.com:ecma-team/pdp-erp/app-cabinet-side.git

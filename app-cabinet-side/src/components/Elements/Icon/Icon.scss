@@ -1,0 +1,126 @@
+.iconWrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  transition: 0.3s linear;
+  cursor: pointer;
+  position: relative;
+
+  &.sm {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.md {
+    width: 44px;
+    height: 44px;
+  }
+
+  &.lg {
+    width: 48px;
+    height: 48px;
+  }
+
+  &.xl {
+    width: 56px;
+    height: 56px;
+  }
+
+  &.withHover {
+    &:hover {
+      background-color: var(--defult--hover);
+    }
+
+    &.bgGreen {
+      &:hover {
+        background-color: var(--green--hover);
+      }
+    }
+
+    &.bgInfo {
+      &:hover {
+        background-color: var(--info--hover);
+      }
+    }
+
+    &.bgSuccess {
+      &:hover {
+        background-color: var(--success--hover);
+      }
+    }
+
+    &.bgWarning {
+      &:hover {
+        background-color: var(--warning--hover);
+      }
+    }
+
+    &.bgDanger {
+      &:hover {
+        background-color: var(--danger--hover);
+      }
+    }
+  }
+
+  // SubElement
+  .icon {
+    width: 22px;
+    height: 22px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--text--disable);
+    transition: .3s linear;
+
+    &.sm {
+      width: 20px;
+      height: 20px;
+    }
+
+    &.md {
+      width: 22px;
+      height: 22px;
+    }
+  
+    &.lg {
+      width: 24px;
+      height: 24px;
+    }
+  
+    &.xl {
+      width: 36px;
+      height: 36px;
+    }
+  
+
+    &.dark {
+      background-color: var(--dark);
+    }
+
+    &.green {
+      background-color: var(--green);
+    }
+
+    &.info {
+      background-color: var(--info);
+    }
+
+    &.success {
+      background-color: var(--success);
+    }
+
+    &.warning {
+      background-color: var(--warning);
+    }
+
+    &.danger {
+      background-color: var(--danger);
+    }
+
+    &.white {
+      background-color: var(--white);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.sidebar {
+  &__cabinet {
+    background-color: #fff;
+    width: 280px;
+    height: 100%;
+    border-right: 1px solid #e5e8eb;
+    overflow-y: scroll;
+    transition: 0.4s ease-in-out;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    section {
+      &:nth-child(2) {
+        height: calc(100% - 184px);
+      }
+    }
+  }
+
+  &__top {
+    padding: 24px 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
